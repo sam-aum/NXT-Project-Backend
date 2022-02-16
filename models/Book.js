@@ -5,6 +5,7 @@ const bookSchema = mongoose.Schema({
     authors: {type: String},
     imageLinks: {type: String},
     description: {type: String, default: 'Book Description!'},
+    reading: {type: Boolean}
    
 }, {timestamps: true})
   

@@ -31,7 +31,7 @@ router.post('/', async (req,res)=>{
     try {
         console.log("making a new book with", req.body)
         //try to run the code in this block
-        const newBook = await Book.create(req.body)
+        const newBook = await Book.findById(req.body._id)
             //await - pauses the execution of the code until the promise (Book.create) resolves -then stores that returned value in newBook
         res.json(newBook)
     } catch(err){

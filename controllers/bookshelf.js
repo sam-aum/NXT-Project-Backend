@@ -56,17 +56,17 @@ router.delete('/:id', async (req,res) =>{
 })
 
 // Update Route
-router.put('/:id', async (req,res)=>{
-    //added async keyword to the anonymous function callback
-    try {
-        console.log("making a new book with", req.body)
-        const updateBook = await Book.findByIdAndUpdate(req.params.id, req.body, {new:true})
+// router.put('/:id', async (req,res)=>{
+//     //added async keyword to the anonymous function callback
+//     try {
+//         console.log("making a new book with", req.body)
+//         const updateBook = await Book.findByIdAndUpdate(req.params.id, req.body, {new:true})
        
-        res.json(updateBook)
-    } catch(err){  
-        console.log(err)
-        res.send('error occured')
-    }
-})
+//         res.json(updateBook)
+//     } catch(err){  
+//         console.log(err)
+//         res.send('error occured')
+//     }
+// })
 
 module.exports = router
